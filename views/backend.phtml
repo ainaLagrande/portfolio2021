@@ -1,0 +1,42 @@
+<h1 class="text-center">Backend</h1>
+
+<div class="crud-text">
+    <h4>Le mieux pour que tu vois mes compétences en Backend c'est de 
+        faire un CRUD! avec conditions en PHP et oppérations en MySQL </h4>
+    <ol>
+        <li>Create</li>
+        <li>Read</li>
+        <li>Update</li>
+        <li>Delete</li>
+    </ol>
+</div>
+
+<div class="crud-text2">
+    <h4> Le CRUD désigne les quatres opérations de base pour la persistance des données</h4>
+        <ul>
+            <li>Créer (utilisateur,article,panier,cagnotte ....)</li>
+            <li>Lire(les donées,articles ...)</li>
+            <li>Mettre à jour(Le mot de passe , pseudo , section...)</li>
+            <li>Supprimer(compte, base de donées ...)</li>
+        </ul>
+</div>
+
+<h3 class="text-center">Donc ici vas suivre une page d'inscription ,connexion et etc </h3>
+
+
+
+<form class="crudForm" method="POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail2" class="form-label">Pseudo</label>
+    <input type="text" name="userName" class="form-control" id="exampleInputEmail2">
+ 
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword2" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="exampleInputPassword2">
+  </div>
+  <span class='formErrors'><?php if(isset ($errors)){echo $errors;}?></span><br/>
+  
+  <button type="submit" class="btn btn-primary">S'inscrire</button>
+</form>

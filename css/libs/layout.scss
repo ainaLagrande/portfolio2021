@@ -1,0 +1,57 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Antic Slab', serif;
+    
+}
+body
+{
+    // background-color: #A4A4A4;
+}
+nav
+{
+    
+    background-color: #EED6D3;
+    height: 80px;
+    border-bottom: 2px solid #EED6D3;
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        li{
+            list-style-type: none;
+            font-size: 1.2em;
+            
+
+            a{
+                text-decoration: none;
+                color: black;
+
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+     
+}
+.sub-menu
+{
+    flex-direction: column;
+    justify-content: space-around;
+    display: none;
+    cursor: pointer;
+    padding-top: 100px;
+    text-align: center;
+    background-color:#949494;
+
+}
+span{
+    cursor: pointer;
+}
+
+
