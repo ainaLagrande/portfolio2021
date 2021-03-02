@@ -1,30 +1,86 @@
-.eyes {
-    position: absolute;
-    top: 40%;
-    left: 65%;
-    text-align: center;
+*
+{
+  font-family: 'Courier New', Courier, monospace;
+  color:black;
+  
+}
+
+// ****************TEXT SCROLL
+ .text-scroll
+ {
+   h1{
+    font-size:8em;
+   }
+  
+  height: 100vh;
+  overflow-x: hidden; 
+ }
+ .line-1
+ {
+   position: relative;
+   top: 15%;
+   white-space: nowrap;
+   text-align: center;
+   
+ }
+ .line-2
+ {
+   position: relative;
+   top:20%;
+   left: 5%;
+   white-space: nowrap;
+   text-align: center;
+ }
+
+
+//******************** IMG
+ .img-portfolio
+ {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1% 1%;
+
+   .imgRotate1, .imgRotate2, .imgRotate3
+   {
+     width:600px;
+     height: 900px;
+   }
+   .imgRotate1
+   {
+     background-color: aquamarine;
+     margin: 300px 0px 0px 200px;
+    //  transform: rotate(-15deg);
+   }
+   .imgRotate2
+   {
+     background-color:blueviolet;
+     transform: rotate(15deg);
+
+     
+   }
+   .imgRotate2.imgRotate2JS
+   {
+     animation: rotate-img2 1s  alternate forwards;
+   }
+  @keyframes rotate-img2
+{
+   from
+  {
+    transform: scale(1) rotate(15deg)
   }
-  
-  .eye {
-    width: 100px;
-    height: 50px;
-    background: #fff;
-    display: inline-block;
-    margin: 40px;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
+  to
+  {
+    transform: scale(1) rotate(0deg)
   }
-  
-  
-  .ball {
-    width: 30px;
-    height: 30px;
-    background: #000;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(50%, 50%);
-    border-radius: 50%;
-  }
-  
+}
+
+   .imgRotate3
+   {
+     background-color:brown;
+     grid-column: 2/2;
+     margin-top: -280px;
+    //  transform: rotate(-40deg);
+     
+   }
+ }

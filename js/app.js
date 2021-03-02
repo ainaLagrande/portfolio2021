@@ -1,68 +1,46 @@
-// *********************SUBMENU
-function subMenu()
-{
-  let subMenu = document.querySelector('.sub-menu');
+// 'use strict';
 
-  if (subMenu.style.display === "none")
-  {
-    subMenu.style.display = "block";
+// // *********************SUBMENU
+// function subMenu()
+// {
+//   let subMenu = document.querySelector('.sub-menu');
+
+//   if (subMenu.style.display === "none")
+//   {
+//     subMenu.style.display = "block";
+//   }
+//   else
+//   {
+//     subMenu.style.display = "none";
+//   }
+// }
+
+
+
+// //***********TEXT SCROLL
+
+// let line1 = document.querySelector('.line-1');
+// let line2 = document.querySelector('.line-2');
+
+// window.onscroll = () => {//au scroll on fait une fonction
+//    let pos = window.scrollY;
+//    line1.style.left = -pos * 0.5 +"px"; //a chaque fois ca rajoute un pixel
+//    line2.style.left = pos * 0.5 +"px";
+// }
+
+
+// ********IMG ROTATE 
+
+
+window.onscroll = function() {
+  let img2 = document.querySelector('.imgRotate2');
+
+  if(document.documentElement.scrollTop >=500) {
+
+    img2.classList.add('imgRotate2JS'); 
   }
-  else
-  {
-    subMenu.style.display = "none";
-  }
-}
+  // else (document.documentElement.scrollTop >=500)  {
+  //   img2.classList.add('imgRotate2JS'); 
+  // }
 
-
-// ******************STALK EYES
-
- let balls=document.getElementsByClassName("ball");
-
- document.onmousemove =function()
-{
-	 let x =event.clientX * 100 /window.innerWidth + "%";
-	 let y =event.clientY * 100 /window.innerHeight + "%";
-
-
-for (let i=0; i<2; i++)
-{
-	balls[i].style.left=x;
-	balls[i].style.top=y;
-	balls[i].style.transform=
-	"translate(-" + x + ",-" + y + ")";
-}
-
-    console.log("x =" + x);
-    console.log("y = " + y);
-}
-
-
-//********************** */ SLIDE IMG
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("demo");
-  let captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
 }
