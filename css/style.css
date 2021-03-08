@@ -2,7 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Antic Slab", serif;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  background-color: #383838;
+  color: #EED6D3;
 }
 
 nav {
@@ -197,13 +202,13 @@ form .btn:hover {
   color: black;
 }
 
-* {
-  font-family: "Courier New", Courier, monospace;
-  color: black;
-}
-
 .text-scroll {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
   overflow-x: hidden;
 }
 .text-scroll h1 {
@@ -212,17 +217,16 @@ form .btn:hover {
 
 .line-1 {
   position: relative;
-  top: 15%;
   white-space: nowrap;
   text-align: center;
+  z-index: 2;
 }
 
 .line-2 {
   position: relative;
-  top: 20%;
-  left: 5%;
   white-space: nowrap;
   text-align: center;
+  z-index: 2;
 }
 
 .img-portfolio {
@@ -230,34 +234,126 @@ form .btn:hover {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1% 1%;
+  z-index: 1;
+  margin-bottom: 400px;
 }
 .img-portfolio .imgRotate1, .img-portfolio .imgRotate2, .img-portfolio .imgRotate3 {
   width: 600px;
   height: 900px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  transition: 1s ease-in-out;
+  border: 1px solid #EED6D3;
 }
 .img-portfolio .imgRotate1 {
-  background-color: aquamarine;
   margin: 300px 0px 0px 200px;
+  background-image: url(../img/me56.jpg);
+  border-radius: 0px 0px 0px 200px;
 }
 .img-portfolio .imgRotate2 {
-  background-color: blueviolet;
-  transform: rotate(15deg);
-}
-.img-portfolio .imgRotate2.imgRotate2JS {
-  animation: rotate-img2 1s alternate forwards;
-}
-@keyframes rotate-img2 {
-  from {
-    transform: scale(1) rotate(15deg);
-  }
-  to {
-    transform: scale(1) rotate(0deg);
-  }
+  background-image: url(../img/me.jpg);
+  border-radius: 0px 200px 0px 0px;
 }
 .img-portfolio .imgRotate3 {
-  background-color: brown;
+  background-image: url(../img/me77.jpg);
+  border-radius: 0px 0px 200px 0px;
   grid-column: 2/2;
-  margin-top: -280px;
+  margin-top: -200px;
+}
+
+#autotext {
+  border-right: 1px solid white;
+  letter-spacing: 0.5em;
+  margin-top: -1100px;
+  margin-left: 200px;
+  width: 600px;
+}
+
+.birth-box {
+  margin: 600px 0px 400px 10px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 3px #383838 solid;
+  border-radius: 100px 100px 100px 100px;
+  cursor: pointer;
+}
+.birth-box .birth {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding-right: 50px;
+  padding-top: 50px;
+}
+.birth-box .birth:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+}
+.birth-box .birth h5 {
+  width: 40%;
+}
+.birth-box .birth h5 a {
+  color: #EED6D3;
+}
+.birth-box .birth .little-me-img {
+  width: 45%;
+  height: 550px;
+  margin-bottom: 20px;
+  border: 1px solid #EED6D3;
+  padding: 10px;
+  border-radius: 100px 100px 100px 100px;
+  cursor: pointer;
+}
+
+.hover-img-effect {
+  height: 800px;
+  border-radius: 100px 100px 100px 100px;
+  border: 1px solid #EED6D3;
+  padding: 10px;
+}
+
+.break-img {
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+  border: 1px solid #EED6D3;
+  padding: 10px;
+}
+
+.skills-text {
+  position: relative;
+  width: 80%;
+  left: 10%;
+  text-align: center;
+  margin-bottom: 250px;
+  margin-top: 250px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+section h2 {
+  position: absolute;
+  font-size: 5em;
+}
+section h3 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=style.scss.map */
