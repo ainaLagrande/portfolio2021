@@ -15,7 +15,7 @@ function subMenu()
   }
 }
 
-// //***********TEXT SCROLL
+// ***********TEXT SCROLL
 
 let line1 = document.querySelector('.line-1');
 let line2 = document.querySelector('.line-2');
@@ -27,17 +27,29 @@ window.onscroll = () => {//au scroll on fait une fonction
 }
 
 
-//***** IMG1 ROTATE 
+// ***********BIRDTH SECTION**********************
 
+const threshold = .1
+const options = {
+	root:null,
+	rootMargin:'0px',//a partir de combien de marges faut il depasser pour etre visible
+	threshold//a partir de 10% d'element on commence a faire apparaitre lelement
+}
 
-// window.onscroll = function() {
-// 	test() ;
-//  };
+const handleIntersect = function (entries, observer) {
+	entries.forEach(function (entry) {
+	  if (entry.intersectionRatio > threshold) {
+			entry.target.classList.add('reveal-visible');
+			observer.unobserve(entry.target);
+		} 
+	});
+}
+const observer = new IntersectionObserver(handleIntersect ,options)
+document.querySelectorAll('[class*="reveal-"]').forEach(function(r){
 
-//  function test() {
-// 	let img1 = document.querySelector('.imgRotate1'); 
-// 	img1.style.transform = "rotate("+ window.pageYOffset/70 + "deg)";
-//  }
+	observer.observe(r)
+
+})
 
 
 
@@ -92,7 +104,6 @@ new Typewriter (txtAnime,{
 .typeString("Bon, Tu as compris ça c'est moi")
 .pauseFor(100)
 .start()
-
 
 
 // **********PARALLAX 

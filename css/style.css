@@ -153,8 +153,6 @@ header .photoSquare:hover {
 }
 
 .crud-text {
-  background-image: url(../img/crud.svg);
-  background-repeat: no-repeat;
   width: 50%;
   height: 600px;
   font-size: 1.3em;
@@ -168,8 +166,6 @@ header .photoSquare:hover {
 }
 
 .crud-text2 {
-  background-image: url(../img/04.svg);
-  background-repeat: no-repeat;
   height: 600px;
   margin-left: 800px;
   margin-top: -350px;
@@ -279,6 +275,7 @@ form .btn:hover {
   border: 3px #383838 solid;
   border-radius: 100px 100px 100px 100px;
   cursor: pointer;
+  overflow-x: hidden;
 }
 .birth-box .birth {
   display: flex;
@@ -288,6 +285,8 @@ form .btn:hover {
   width: 100%;
   padding-right: 50px;
   padding-top: 50px;
+  position: relative;
+  transition: ease-in-out 1s;
 }
 .birth-box .birth:nth-child(2) {
   display: flex;
@@ -308,20 +307,41 @@ form .btn:hover {
   border-radius: 100px 100px 100px 100px;
   cursor: pointer;
 }
-
-.hover-img-effect {
+.birth-box .birth .hover-img-effect {
   height: 800px;
   border-radius: 100px 100px 100px 100px;
   border: 1px solid #EED6D3;
   padding: 10px;
 }
-
-.break-img {
+.birth-box .birth .break-img {
   border-radius: 50%;
   height: 500px;
   width: 500px;
   border: 1px solid #EED6D3;
   padding: 10px;
+}
+
+[class*=reveal-] {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s ease-in-out;
+}
+
+.reveal-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-2 {
+  transition-delay: 0.3s;
+}
+
+.reveal-3 {
+  transition-delay: 0.5s;
 }
 
 .skills-text {
