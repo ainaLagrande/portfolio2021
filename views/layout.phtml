@@ -18,24 +18,24 @@
 
 <nav>
   <ul>
-    <li><a href="index.php?page=homepage">Acceuil</a></li>
-    <li><a href="index.php?page=frontend">Côté Front-end</a></li>
+    <li><a href="index.php?page=homepage" class="link-animation">Acceuil</a></li>
+    <li><a href="index.php?page=frontend" class="link-animation">Côté Front-end</a></li>
+    <li><a href="index.php?page=frontend#contact" class="link-animation">Contact</a></li>
 
-    <li><a href="index.php?page=backend">Côté Back-end</a>
-    <span onclick="subMenu()"><i class="fas fa-chevron-right"></i></span>
+    <li><a href="index.php?page=backend"class="link-animation">Côté Back-end</a>
     
+    <span onclick="subMenu()"><i class="fas fa-chevron-right"></i></span>
     <ul class="sub-menu">
-      
+    
       <?php if(isset($_SESSION['auth'])): ?>
-      <li><a href="index.php?page=logout">Se déconnecter</a></li>
-      <li><a href="index.php?page=account">Mon compte</a></li>
+      <li><a href="index.php?page=logout" class="link-animation">Se déconnecter</a></li>
+      <li><a href="index.php?page=account" class="link-animation">Mon compte</a></li>
       <?php else: ?>
-        <li><a href="index.php?page=backend">S'inscrire</a></li>
-      <li><a href="index.php?page=login">Se connecter</a></li>
+        <li><a href="index.php?page=backend" class="link-animation">S'inscrire</a></li>
+      <li><a href="index.php?page=login" class="link-animation">Se connecter</a></li>
       
       <?php endif; ?>
     </ul>
-
     </li>
   </ul>
 </nav>
@@ -45,6 +45,10 @@
         <?php require $page ?>
   </main>
   <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js" 
+  integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ==" 
+  crossorigin="anonymous">
+</script>
   <script src="./js/app.js"></script>
 
 </body>

@@ -1,6 +1,19 @@
-// 'use strict';
+'use strict';
 
-// // *********************SUBMENU
+const tl = gsap.timeline({defaults:{ ease: "power1.out"}});
+
+tl.to(".text", { y:"0%", duration: 1, stagger:0.25 });
+tl.to(".slider", { y: "-100%", duration:1.5, delay:0.5 });
+tl.to(".intro", { y: "-100%", duration:1 },"-=1.5");
+
+
+
+
+
+
+
+
+// *********************SUBMENU
 function subMenu()
 {
   let subMenu = document.querySelector('.sub-menu');
@@ -27,7 +40,7 @@ window.onscroll = () => {//au scroll on fait une fonction
 }
 
 
-// ***********BIRDTH SECTION**********************
+// *********** REVEAL  SECTION**********************
 
 const threshold = .1
 const options = {
@@ -52,49 +65,6 @@ document.querySelectorAll('[class*="reveal-"]').forEach(function(r){
 })
 
 
-
-//***** IMG1 ROTATE 
-
-window.addEventListener('scroll', ()=>{
-	let img1 = document.querySelector('.imgRotate1'); 
-	  if(window.scrollY<=700){ 
-		  img1.style.transform='rotate(-15deg)';
-	  }
-	  else if(window.scrollY>=1600)
-	  {
-		  img1.style.transform='rotate(0deg)';
-  
-	  }
-  });
-// //***** IMG2 ROTATE 
-
-window.addEventListener('scroll', ()=>{
-	let img2 = document.querySelector('.imgRotate2'); 
-	  if(window.scrollY<=700){ 
-		  img2.style.transform='rotate(15deg)';
-		//   console.log(window.scrollY);
-	  }
-	  else if(window.scrollY>=1480)
-	  {
-		  img2.style.transform='rotate(0deg)';
-  
-	  }
-  });
-
-// //***** IMG3 ROTATE 
-
-  window.addEventListener('scroll', ()=>{
-	let img3 = document.querySelector('.imgRotate3'); 
-	  if(window.scrollY<=700){ 
-		  img3.style.transform='rotate(-40deg)';
-	  }
-	  else if(window.scrollY>=1800)
-	  {
-		  img3.style.transform='rotate(0deg)';
-  
-	  }
-  });
-
 //**********AUTO TEXT
 const txtAnime=document.getElementById("autotext");
 
@@ -106,7 +76,7 @@ new Typewriter (txtAnime,{
 .start()
 
 
-// **********PARALLAX 
+// ********** SKILS PARALLAX 
 
 document.addEventListener("mousemove" ,parallax);
 
@@ -121,6 +91,36 @@ function parallax(e){
 
 	});
 };
+
+
+// *************** FORM ANIMATION ****************
+
+
+const input = document.querySelectorAll('.formLabel');
+
+
+document.addEventListener('input', function(e) {
+	
+    
+    if(e.target.value !== "") {
+        e.target.parentNode.classList.add('activeInput');
+    } 
+    else if (e.target.value === "") {
+        e.target.parentNode.classList.remove('activeInput');
+    }
+	
+});
+
+
+
+//  const formColor = document.querySelectorAll('.forms');
+
+//  if(formColor.style.top = "-20px"){
+// 	 console.log('dfvb');
+//  }
+
+
+
 
 
 

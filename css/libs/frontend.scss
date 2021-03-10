@@ -1,10 +1,8 @@
 // ****************TEXT SCROLL
-
 .text-scroll
  {
    h1{
     font-size:8em;
-    // color: white;
    }
   height: 100vh;
   display: flex;
@@ -28,10 +26,8 @@
    white-space: nowrap;
    text-align: center;
    z-index: 2; 
-
-
  }
-//***************************** IMG ***********************
+//************************ IMG ***********************
  .img-portfolio
  {
     display: grid;
@@ -41,51 +37,47 @@
     z-index: 1;
     margin-bottom: 400px;
 
-   .imgRotate1, .imgRotate2, .imgRotate3
+   .img1, .img2, .img3
    {
      width:600px;
      height: 900px;
      cursor: pointer;
      z-index: 1;
      position: relative;
-     transition: 1s ease-in-out;
      border:1px solid #EED6D3;
      
    }
-   .imgRotate1
+   .img1
    {
      margin: 300px 0px 0px 200px;
      background-image: url(../img/me56.jpg);
      border-radius: 0px 0px 0px 200px;
    }
-   .imgRotate2
+   .img2
    {
      background-image: url(../img/me.jpg);
      border-radius: 0px 200px 0px 0px;
    }
-   .imgRotate3
+   .img3
    {
      background-image: url(../img/me77.jpg);
      border-radius: 0px 0px 200px 0px;
      grid-column: 2/2;
      margin-top: -200px;
    }
-
  }
+
  #autotext
  {
-   border-right: 1px solid white;
+  //  border-right: 1px solid white;
    letter-spacing: 0.5em;
-   margin-top: -1100px;
+   margin-top: -1500px;
    margin-left: 200px;
    width: 600px;
+   color: #EED6D3;
  }
 
-
-
-
-
-//***********************  PARCOURS ********************
+//***********************  BIRTH BOX  ********************
  .birth-box
  {
   margin:600px 0px 400px 10px;
@@ -120,7 +112,15 @@
           width: 40%;
           a{
             color: #EED6D3;
+
+            &:hover{
+              text-decoration: none;
+            }
           }
+          .link-animation::after{
+            background-color: #EED6D3;
+          }
+          
         }
         .little-me-img
           {
@@ -147,50 +147,9 @@
           }
    }
  }
- [class*="reveal-"]
- {
-  opacity: 0;
-  transform:translateY(-30px);
- }
-// .reveal {
-//   opacity: 0;
-//   transform:translateY(-30px);
-// }
-.reveal-visible
-{
-  opacity: 1;
-  transform: translateY(0);
-  transition: 1s ease-in-out;
-}
-.reveal-1{
-  transition-delay: .1s;
-}
-.reveal-2{
-  transition-delay: .3s;
-}
-.reveal-3{
-  transition-delay: .5s;
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// **********SKILLS PROGRESS BAR ***********
+ 
+// **********SKILLS  ***********
 
 .skills-text
 {
@@ -200,18 +159,18 @@
   text-align: center;
   margin-bottom: 250px;
   margin-top: 250px;
-
 }
 section{
-
+  background-image: url(../img/svg4.svg);
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 85vh;
   overflow:hidden;
   display:flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-bottom: 500px;
 
   h2{
     position: absolute;
@@ -221,21 +180,90 @@ section{
    h3{
     position: relative;
     top: 0;
-    // background-color: lime;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-
   }
+}
+/**********FORM SECTION***************/
+#contact{
+  display: flex;
+  // background-color: cadetblue;
+  h2{
+    display: flex;
+    justify-content: center;
+  }
+  
+}
+.formContainer{
+  // position: relative;
+  width: 100%;
+  // height: 100vh;
+  // top: -15%;
+  // left: -15%;
+  // background-color: cadetblue;
+  background-color: chocolate;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.forms
+{
+  margin-bottom: 35px;
+  // width: 100%;
+  color:black;
+  cursor: pointer;
+  
 
+
+    input,textarea
+  {
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    width: 100%;
+    height: 40px;
+    border:transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+  }
+  textarea{
+    height: 300px;
+  }
+}
+.submitButton
+{
+  width: 100%;
+  height: 40px;
+  border-radius: 20px;
+  border:1px solid rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+
+  &:hover
+  {
+    background-color:#EED6D3;
+    border:1px #EED6D3 solid;
+    color: rgba(0, 0, 0, 1);
+  }
 }
 
+.infos-contact{
+  // background-color: chartreuse;
+}
 
-
-
-
-
+/*********FORM ANIMATION**************/
+.formLabel
+{
+  position: absolute;
+  margin-top: 20px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease-out;
+}
+ .forms:focus-within .formLabel,
+ .forms.activeInput .formLabel
+ {
+  margin-top:-20px;
+ }
 
 
 

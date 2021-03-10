@@ -12,7 +12,6 @@ body
 }
 nav
 {
-    
     background-color: #EED6D3;
     height: 80px;
     border-bottom: 2px solid #EED6D3;
@@ -25,13 +24,16 @@ nav
         li{
             list-style-type: none;
             font-size: 1.2em;
+            display: flex;
             
 
             a{
                 text-decoration: none;
                 color: black;
+                
 
                 &:hover{
+                    text-decoration: none;
                     color: black;
                 }
             }
@@ -39,6 +41,22 @@ nav
     }
      
 }
+//************** LINK ANIMATION ***********
+.link-animation::after{
+    content:'';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #383838;
+    transition:width .3s;
+  
+  }
+  .link-animation:hover::after{
+    width: 100%;
+    transition: width .3s;
+  }
+  
+//************************ SUB-MENU***********
 .sub-menu
 {
     flex-direction: column;
@@ -47,11 +65,36 @@ nav
     cursor: pointer;
     padding-top: 100px;
     text-align: center;
-    background-color:#949494;
+    // background-color:#949494;
 
+    span{
+        cursor: pointer;
+        color: #383838;
+        margin-left: 20px;
+    }
 }
-span{
-    cursor: pointer;
+// ******REVEAL TRANSITION
+
+[class*="reveal-"]
+{
+ opacity: 0;
+ transform:translateY(-30px);
 }
+.reveal-visible
+{
+ opacity: 1;
+ transform: translateY(0);
+ transition: 1s ease-in-out;
+}
+.reveal-1{
+ transition-delay: 2.5s;
+}
+.reveal-2{
+ transition-delay: .3s;
+}
+.reveal-3{
+ transition-delay: 2.5s;
+}
+
 
 
