@@ -9,7 +9,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 2; 
   overflow-x: hidden;
  }
  .line-1
@@ -17,7 +16,6 @@
    position: relative;
    white-space: nowrap;
    text-align: center;
-   z-index: 2; 
 
  }
  .line-2
@@ -25,7 +23,6 @@
    position: relative;
    white-space: nowrap;
    text-align: center;
-   z-index: 2; 
  }
 //************************ IMG ***********************
  .img-portfolio
@@ -34,7 +31,6 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 1% 1%;
-    z-index: 1;
     margin-bottom: 400px;
 
    .img1, .img2, .img3
@@ -42,9 +38,8 @@
      width:600px;
      height: 900px;
      cursor: pointer;
-     z-index: 1;
      position: relative;
-     border:1px solid #EED6D3;
+     border:1px solid $primary-pink-color;
      
    }
    .img1
@@ -66,15 +61,13 @@
      margin-top: -200px;
    }
  }
-
  #autotext
  {
-  //  border-right: 1px solid white;
    letter-spacing: 0.5em;
    margin-top: -1500px;
    margin-left: 200px;
    width: 600px;
-   color: #EED6D3;
+   color: $primary-pink-color;
  }
 
 //***********************  BIRTH BOX  ********************
@@ -85,11 +78,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  border: 3px #383838 solid;
+  border: 3px $primary-drak-color solid;
   border-radius: 100px 100px 100px 100px;
   cursor: pointer;
-  overflow-x: hidden;
-   
+
    .birth
    {
      display: flex;
@@ -102,7 +94,7 @@
      position: relative;
      transition: ease-in-out 1s;
     
-      &:nth-child(2)
+      &:nth-child(3)
       {
         display: flex;
         flex-direction: row;
@@ -111,14 +103,14 @@
         h5{
           width: 40%;
           a{
-            color: #EED6D3;
+            color: $primary-pink-color;
 
             &:hover{
               text-decoration: none;
             }
           }
           .link-animation::after{
-            background-color: #EED6D3;
+            background-color: $primary-pink-color;
           }
           
         }
@@ -127,7 +119,7 @@
             width: 45%;
             height: 550px;
             margin-bottom: 20px;
-            border:1px solid #EED6D3;
+            border:1px solid $primary-pink-color;
             padding: 10px;
             border-radius: 100px 100px 100px 100px;
             cursor: pointer;
@@ -135,20 +127,28 @@
           .hover-img-effect{
             height: 800px;
             border-radius: 100px 100px 100px 100px;
-            border:1px solid #EED6D3;
+            border:1px solid $primary-pink-color;
             padding: 10px;
           }
           .break-img{
             border-radius: 50%;
             height: 500px;
             width: 500px;
-            border:1px solid #EED6D3;
+            border:1px solid $primary-pink-color;
             padding: 10px;
+            // background-image: url(../img/take.svg);
+          }
+
+          .back-img{
+            position:absolute;
+            margin:20px 800px 0px 0px;
+            // padding: 50px;
+            width: 1050px;
+            height:1050px;
           }
    }
  }
 
- 
 // **********SKILLS  ***********
 
 .skills-text
@@ -176,7 +176,6 @@ section{
     position: absolute;
     font-size: 5em;
   }
-
    h3{
     position: relative;
     top: 0;
@@ -189,40 +188,27 @@ section{
 /**********FORM SECTION***************/
 #contact{
   display: flex;
-  // background-color: cadetblue;
-  h2{
-    display: flex;
-    justify-content: center;
-  }
-  
-}
-.formContainer{
-  // position: relative;
+  justify-content: space-around;
   width: 100%;
-  // height: 100vh;
-  // top: -15%;
-  // left: -15%;
-  // background-color: cadetblue;
-  background-color: chocolate;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  height: 100vh;
+
+  form{
+    margin-top:0px;
+    margin-left: 0px;
+  }
 }
 .forms
 {
   margin-bottom: 35px;
-  // width: 100%;
   color:black;
   cursor: pointer;
-  
-
 
     input,textarea
   {
     display: flex;
     flex-direction:column;
     justify-content: flex-start;
-    width: 100%;
+    width: 80%;
     height: 40px;
     border:transparent;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
@@ -233,24 +219,19 @@ section{
 }
 .submitButton
 {
-  width: 100%;
+  width: 80%;
   height: 40px;
   border-radius: 20px;
-  border:1px solid rgba(0, 0, 0, 1);
+  border:1px solid $primary-drak-color;
   background-color: rgba(255, 255, 255, 1);
 
   &:hover
   {
-    background-color:#EED6D3;
-    border:1px #EED6D3 solid;
+    background-color:$primary-pink-color;
+    border:1px $primary-pink-color solid;
     color: rgba(0, 0, 0, 1);
   }
 }
-
-.infos-contact{
-  // background-color: chartreuse;
-}
-
 /*********FORM ANIMATION**************/
 .formLabel
 {
@@ -266,24 +247,76 @@ section{
  }
 
 
+.infos-contact{
+  text-align: center;
 
+  a{
+    color: $primary-pink-color;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  .link-animation::after{
+    background-color: $primary-pink-color;
+  }
+}
 
-// .scrollingTxt{
-//   position: relative;
-//   margin-top: 20px;
-//   height: 50px;
-//   border: 2px solid #EED6D3;
-//   // color: white;
-//   // background-color: #EED6D3;
-//   width: 100%;
-//   overflow: hidden;
-//   margin-bottom: 800px;
-// }
-// .result{
-//   position: absolute;
-//   top:0;
-//   left:0;
-//   font-size: 22px;
-//   line-height: 50px;
-//   vertical-align :middle;
-// }
+.social-networks{
+  margin-top: 50px;
+  ul{
+    display: flex;
+    justify-content: space-between;
+
+    li{
+      list-style-type: none;
+      border: 1px $primary-pink-color solid;
+      border-radius: 50%;
+      padding: 20px;
+      cursor: pointer;
+
+      &:hover{
+        animation: networks-rotate .6s ease-in-out;
+      }
+    }
+    @keyframes networks-rotate {
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
+
+.marquee {
+  margin-bottom: 150px;
+  position: relative;
+  overflow: hidden;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+
+  .marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    transform: translate3d(var(--move-initial), 0, 0);
+    animation: marquee 5s linear infinite;
+  }
+  span {
+    font-size: 10vw;
+    padding: 0 2vw;
+  }
+}
+
+@keyframes marquee {
+  0% {
+      transform: translate3d(var(--move-initial), 0, 0);
+  }
+
+  100% {
+      transform: translate3d(var(--move-final), 0, 0);
+  }
+}
+

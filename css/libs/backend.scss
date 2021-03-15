@@ -43,14 +43,14 @@ form{
     .btn
     {
         width:100%;
-        background-color: #EED6D3;
+        background-color: $primary-pink-color;
         border: 1px #949494 solid;
         color: black;
 
 
         &:hover{
             background-color: #949494;
-            border: 1px solid #EED6D3;
+            border: 1px solid $primary-pink-color;
             color: black;
         }
     }

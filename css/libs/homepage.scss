@@ -19,7 +19,7 @@
     font-size: 3em;
 
     .hide{
-      background-color:#383838;
+      background-color:$primary-drak-color;
       overflow:hidden;
       
 
@@ -28,7 +28,7 @@
       span{
         transform: translateY(100%);
         display: inline-block;
-        color: #EED6D3;
+        color: $primary-pink-color;
       }
 
     }
@@ -36,7 +36,7 @@
   }
 }
 .slider{
-  background-color: #EED6D3;
+  background-color: $primary-pink-color;
   position:fixed;
   top:0;
   left:0;

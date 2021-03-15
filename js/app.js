@@ -1,5 +1,5 @@
 'use strict';
-
+//*********************APPARITION HOMAPAGE*******************
 const tl = gsap.timeline({defaults:{ ease: "power1.out"}});
 
 tl.to(".text", { y:"0%", duration: 1, stagger:0.25 });
@@ -7,13 +7,7 @@ tl.to(".slider", { y: "-100%", duration:1.5, delay:0.5 });
 tl.to(".intro", { y: "-100%", duration:1 },"-=1.5");
 
 
-
-
-
-
-
-
-// *********************SUBMENU
+// *********************SUBMENU*******************
 function subMenu()
 {
   let subMenu = document.querySelector('.sub-menu');
@@ -28,7 +22,7 @@ function subMenu()
   }
 }
 
-// ***********TEXT SCROLL
+// ***********TEXT SCROLL*********************
 
 let line1 = document.querySelector('.line-1');
 let line2 = document.querySelector('.line-2');
@@ -65,7 +59,7 @@ document.querySelectorAll('[class*="reveal-"]').forEach(function(r){
 })
 
 
-//**********AUTO TEXT
+//**********AUTO TEXT********************
 const txtAnime=document.getElementById("autotext");
 
 new Typewriter (txtAnime,{
@@ -76,7 +70,7 @@ new Typewriter (txtAnime,{
 .start()
 
 
-// ********** SKILS PARALLAX 
+// ********** SKILS PARALLAX ****************
 
 document.addEventListener("mousemove" ,parallax);
 
@@ -101,7 +95,6 @@ const input = document.querySelectorAll('.formLabel');
 
 document.addEventListener('input', function(e) {
 	
-    
     if(e.target.value !== "") {
         e.target.parentNode.classList.add('activeInput');
     } 
@@ -111,20 +104,17 @@ document.addEventListener('input', function(e) {
 	
 });
 
+//*********** TEXT ROTATION ONSCROLL *********
 
+window.onscroll = function(){
+  scrollRotate();
+};
 
-//  const formColor = document.querySelectorAll('.forms');
-
-//  if(formColor.style.top = "-20px"){
-// 	 console.log('dfvb');
-//  }
-
-
-
-
-
-
-
+function scrollRotate(){
+  
+  let backImg = document.querySelector('.back-img');
+  backImg.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
+}
 
 
 
@@ -137,27 +127,3 @@ document.addEventListener('input', function(e) {
 
 
 
-
-
-// 	window.addEventListener('DOMContentLoaded', function (e) {
-// 	e.preventDefault();
-// 	let resultTxt = document.getElementById('result');
-// 	let pos = 0; 
-// 	let scroll = setInterval(frame,1);
-
-// 	document.write("<p>TEXT /p>");
-
-
-
-
-
-//     function frame() {
-//         if (pos === 1280) {
-//             pos = 0;
-//         } 
-// 		else {
-// 			pos++;
-//             resultTxt.style.left = pos + "px";
-//         }
-//     }
-// })

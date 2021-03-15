@@ -5,16 +5,21 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
+$primary-pink-color:#EED6D3;
+$primary-drak-color:#383838;
 body
 {
-    background-color: #383838;
-    color: #EED6D3;
+    background-color: $primary-drak-color;
+    color:$primary-pink-color;
 }
 nav
 {
-    background-color: #EED6D3;
+    background-color: $primary-pink-color;
     height: 80px;
-    border-bottom: 2px solid #EED6D3;
+    border-bottom: 2px solid $primary-pink-color;
+    // position: fixed;
+    width:100%;
+    z-index: 5;
 
     ul{
         display: flex;
@@ -47,7 +52,7 @@ nav
     display: block;
     width: 0;
     height: 2px;
-    background-color: #383838;
+    background-color: $primary-drak-color;
     transition:width .3s;
   
   }
@@ -65,11 +70,10 @@ nav
     cursor: pointer;
     padding-top: 100px;
     text-align: center;
-    // background-color:#949494;
 
     span{
         cursor: pointer;
-        color: #383838;
+        color: $primary-drak-color;
         margin-left: 20px;
     }
 }
@@ -95,6 +99,7 @@ nav
 .reveal-3{
  transition-delay: 2.5s;
 }
+
 
 
 

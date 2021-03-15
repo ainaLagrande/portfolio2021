@@ -14,6 +14,8 @@ nav {
   background-color: #EED6D3;
   height: 80px;
   border-bottom: 2px solid #EED6D3;
+  width: 100%;
+  z-index: 5;
 }
 nav ul {
   display: flex;
@@ -194,7 +196,6 @@ form .btn:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 2;
   overflow-x: hidden;
 }
 .text-scroll h1 {
@@ -205,14 +206,12 @@ form .btn:hover {
   position: relative;
   white-space: nowrap;
   text-align: center;
-  z-index: 2;
 }
 
 .line-2 {
   position: relative;
   white-space: nowrap;
   text-align: center;
-  z-index: 2;
 }
 
 .img-portfolio {
@@ -220,14 +219,12 @@ form .btn:hover {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 1% 1%;
-  z-index: 1;
   margin-bottom: 400px;
 }
 .img-portfolio .img1, .img-portfolio .img2, .img-portfolio .img3 {
   width: 600px;
   height: 900px;
   cursor: pointer;
-  z-index: 1;
   position: relative;
   border: 1px solid #EED6D3;
 }
@@ -264,7 +261,6 @@ form .btn:hover {
   border: 3px #383838 solid;
   border-radius: 100px 100px 100px 100px;
   cursor: pointer;
-  overflow-x: hidden;
 }
 .birth-box .birth {
   display: flex;
@@ -277,7 +273,7 @@ form .btn:hover {
   position: relative;
   transition: ease-in-out 1s;
 }
-.birth-box .birth:nth-child(2) {
+.birth-box .birth:nth-child(3) {
   display: flex;
   flex-direction: row;
 }
@@ -314,6 +310,12 @@ form .btn:hover {
   width: 500px;
   border: 1px solid #EED6D3;
   padding: 10px;
+}
+.birth-box .birth .back-img {
+  position: absolute;
+  margin: 20px 800px 0px 0px;
+  width: 1050px;
+  height: 1050px;
 }
 
 .skills-text {
@@ -353,18 +355,13 @@ section h3 {
 /**********FORM SECTION***************/
 #contact {
   display: flex;
-}
-#contact h2 {
-  display: flex;
-  justify-content: center;
-}
-
-.formContainer {
+  justify-content: space-around;
   width: 100%;
-  background-color: chocolate;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  height: 100vh;
+}
+#contact form {
+  margin-top: 0px;
+  margin-left: 0px;
 }
 
 .forms {
@@ -376,7 +373,7 @@ section h3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  width: 100%;
+  width: 80%;
   height: 40px;
   border: transparent;
   border-bottom: 1px solid black;
@@ -386,10 +383,10 @@ section h3 {
 }
 
 .submitButton {
-  width: 100%;
+  width: 80%;
   height: 40px;
   border-radius: 20px;
-  border: 1px solid black;
+  border: 1px solid #383838;
   background-color: white;
 }
 .submitButton:hover {
@@ -411,6 +408,73 @@ section h3 {
   margin-top: -20px;
 }
 
+.infos-contact {
+  text-align: center;
+}
+.infos-contact a {
+  color: #EED6D3;
+}
+.infos-contact a:hover {
+  text-decoration: none;
+}
+.infos-contact .link-animation::after {
+  background-color: #EED6D3;
+}
+
+.social-networks {
+  margin-top: 50px;
+}
+.social-networks ul {
+  display: flex;
+  justify-content: space-between;
+}
+.social-networks ul li {
+  list-style-type: none;
+  border: 1px #EED6D3 solid;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+}
+.social-networks ul li:hover {
+  animation: networks-rotate 0.6s ease-in-out;
+}
+@keyframes networks-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.marquee {
+  margin-bottom: 150px;
+  position: relative;
+  overflow: hidden;
+  --offset: 20vw;
+  --move-initial: calc(-25% + var(--offset));
+  --move-final: calc(-50% + var(--offset));
+}
+.marquee .marquee__inner {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  transform: translate3d(var(--move-initial), 0, 0);
+  animation: marquee 5s linear infinite;
+}
+.marquee span {
+  font-size: 10vw;
+  padding: 0 2vw;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(var(--move-initial), 0, 0);
+  }
+  100% {
+    transform: translate3d(var(--move-final), 0, 0);
+  }
+}
 /*# sourceMappingURL=style.scss.map */
 
 /*# sourceMappingURL=style.css.map */

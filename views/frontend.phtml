@@ -1,4 +1,8 @@
 <!-- TEXT SCROLL  -->
+
+
+
+
 <div class="text-scroll">
   <div class="line-1">
     <h1>Aïna</h1>
@@ -18,8 +22,19 @@
 
 <h2 id="autotext"></h2>
 
-<!-- PARCOURS  -->
+
+  <!-- PARCOURS  -->
 <div class="birth-box">
+  <!-- BANDE DEROULANTE -->
+<div class="marquee">
+  <div class="marquee__inner" aria-hidden="true">
+    <span>Parcours</span>
+    <span>Parcours</span>
+    <span>Parcours</span>
+    <span>Parcours</span>
+  </div>
+</div>
+
   <div class="birth reveal-">
       <h5>Je m'appelle Aïna AKAGADZHIEVA
       Je me nomme aussi <strong>Aïna LAGARANDE</strong>  grace à  mon compagnon 
@@ -55,14 +70,21 @@
           <li> J'ai appris un nouveau métier, celui de developpeuse Web.</li>
         </ul>
       </h5>
-      <img class="break-img" src="img/book.jpg" alt="">
-      <!-- autor de limage mettre un text qui tourne autour de limage -->
+      <img class="break-img" src="img/book.jpg" alt="image de livre">
+      <img class="back-img" src="img\take1.svg" alt="image svg take it easy">
   </div>
 </div>
+
+</div>
+
+
 
 
 <!-- SKILLS  -->
  <!-- sur cette section rajouter un truc en js comme ouverture de scene -->
+ <!-- en remontant la page la nav qui s'affiche -->
+
+ 
   <div class="skills-text reveal-">
     <h5> J'ai commncé comme tout le monde sur <strong>openclassroom en autodidacte</strong>  pendant 7 mois.</h5>
     <h5>Puis j'ai voulu aller plus loin et j'ai donc fait une <strong>formation</strong>  intense de 3mois
@@ -90,13 +112,19 @@
 
 
  <!-- ****************** CONTACT ****************** -->
+ <div class="marquee">
+  <div class="marquee__inner" aria-hidden="true">
+    <span>Contact</span>
+    <span>Contact</span>
+    <span>Contact</span>
+    <span>Contact</span>
+  </div>
+</div>
 
 <div id="contact">
-  <!-- <h2>Me contacter</h2> -->
+  <!-- onformanimation changement de couleurs -->
 
-  <div class="formContainer">
     <form  method="POST" class="contactForm" action="index.php?page=cible">
-      
       <div class="forms">
         <label class="formLabel">Nom</label>
         <input class="nameInput" type="text" required>
@@ -116,39 +144,26 @@
         <label class="formLabel">Message</label>
       <textarea class="textareaInput" type="text" required></textarea>
       </div>
-  <!-- <button onclick="scra()">dfghbn</button> -->
       <button type="submit" class="submitButton">Envoyer</button>
     </form>
-  </div>
 
-
-  <div class="infos-contact">
-    <p>Sinon je suis présente sur les reseaux sociaux 
-      Je vous invite à consulter mon compte GitHub également 
-    </p> 
+  <div class="infos-contact reveal-">
+    <p>Sinon je suis présente sur les reseaux sociaux </p>
+    <p>Je vous invite également à consulter mon compte GitHub </p> 
     <p>Tel: +33 6 23 69 69 84</p>
     <p>ainapukipuki@gmail.com</p>
-    <p>Site Web: www.ainaweb.site</p>
+    <p>Site Web: <a href="https://www.ainaweb.site/" class="link-animation">www.ainaweb.site</a></p>
+
+      <div class="social-networks">
+        <ul>
+          <li><a href="https://www.linkedin.com/in/a%C3%AFna-lagrande-9683801b9/"><i class="fab fa-linkedin fa-3x"></i></a></li>
+          <li><a href="https://www.instagram.com/ainaweb.site/"><i class="fab fa-instagram fa-3x"></i></a></li>
+          <li><a href="https://github.com/aina200"><i class="fab fa-github fa-3x"></i></a></li>
+          <li><a href="https://gitlab.com/aina200"><i class="fab fa-gitlab fa-3x"></i></a></li>
+        </ul>
+      </div>
   </div>
-
 </div>
-
-
-
-
-
-
-
-
-
-<!-- 
-      <section class="scrollingTxt">
-        
-      <p class="result"></p>
-     <script src="./js/text.js"></script>
-      </section> -->
-
-      
 
 
 
