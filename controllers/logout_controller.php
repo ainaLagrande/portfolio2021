@@ -4,6 +4,6 @@ declare(strict_types=1);
 
 session_destroy();
 
-header('Location:index.php?page=connexion');
+header('Location:index.php?page=login');
 
 die;

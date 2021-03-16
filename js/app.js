@@ -1,4 +1,5 @@
 'use strict';
+
 //*********************APPARITION HOMAPAGE*******************
 const tl = gsap.timeline({defaults:{ ease: "power1.out"}});
 
@@ -20,17 +21,6 @@ function subMenu()
   {
     subMenu.style.display = "block";
   }
-}
-
-// ***********TEXT SCROLL*********************
-
-let line1 = document.querySelector('.line-1');
-let line2 = document.querySelector('.line-2');
-
-window.onscroll = () => {//au scroll on fait une fonction
-   let pos = window.scrollY;
-   line1.style.left = -pos * 0.7 +"px"; //a chaque fois ca rajoute un pixel
-   line2.style.left = pos * 0.7 +"px";
 }
 
 
@@ -57,17 +47,6 @@ document.querySelectorAll('[class*="reveal-"]').forEach(function(r){
 	observer.observe(r)
 
 })
-
-
-//**********AUTO TEXT********************
-const txtAnime=document.getElementById("autotext");
-
-new Typewriter (txtAnime,{
-	deleteSpeed:10
-})
-.typeString("Bon, Tu as compris ça c'est moi")
-.pauseFor(100)
-.start()
 
 
 // ********** SKILS PARALLAX ****************
@@ -103,25 +82,6 @@ document.addEventListener('input', function(e) {
     }
 	
 });
-
-//*********** TEXT ROTATION ONSCROLL *********
-
-window.onscroll = function(){
-  scrollRotate();
-};
-
-function scrollRotate(){
-  
-  let backImg = document.querySelector('.back-img');
-  backImg.style.transform = "rotate(" + window.pageYOffset/2 + "deg)";
-}
-
-
-
-
-
-
-
 
 
 

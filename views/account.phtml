@@ -1,27 +1,32 @@
-<p>Bonjour <?= htmlspecialchars($_SESSION['auth']) ?></p>
-<p>Ca a l'air simple mais avant que tu puisse arriver sur cette page la il m'as 
-    fallu des heures de travail pour tout sécuriser et envoyer dans la base de données.
-    Pour l'inscription j'ai utilisé INSERT
-    Pour la connexion j'ai utilisé SELECT
-    Pour afficher ton pseudo et potentiellemnt modifier une des info que tu m'as donné 
-    j'ai utilisé UPDATE 
-    Puis si jamais tu veux effacer ton compte j'utilise le DELETE</p>
+<div class="text-account">
+
+    <p>Bonjour <?= htmlspecialchars($_SESSION['auth']) ?></p>
+    <p>Cela a  l'air simple, mais avant que tu puisses arriver sur cette page-là il m'a 
+    fallu des heures de travail pour tout sécuriser et envoyer les informations dans la base de données.
+    Pour l'inscription, j'ai utilisé <strong>INSERT.</strong> 
+    Pour la connexion, j'ai utilisé  <strong>SELECT</strong>.
+    Pour afficher ton pseudo et potentiellement modifier une des infos que tu m'as donné,
+    j'ai utilisé <strong>UPDATE</strong>.
+    Puis si jamais tu veux effacer ton compte, j'utilise le <strong>DELETE</strong>. </p>
     <p>Mais avant de faire tout ça il faut tout sécuriser en php
-    Puisqu'on apprend <strong> NEVER TRUST USER INPUT</strong> a part mettre des conditions d'insertion
-    dur les input j'ai aussi utilisé les htmlentities et un droit d'acces limité sur la page <strong>Mon compte</strong><p>
+    Puisqu'on apprend <strong> NEVER TRUST USER INPUT</strong> à part mettre des conditions d'insertion
+    sur les input j'ai aussi utilisé les htmlspecialchars et un droit d'accès limité sur la page <strong>Mon compte</strong><p>
+    <p>Ici, je te propose de tester tout ça en essayant de modifier ton mot de passe par exemple.</p>
 
-    <p>Ici je te propose de tester tout ça en essayant de modifier ton mot de passe par example</p>
+</div>
 
-    <form class="crudForm" method="POST">
+<!-- ************** FORM FOR CHANGE PASSWORD ************  -->
+
+<form class="crudForm" method="POST">
     <div class="form-group accountForm">
         <input  class="form-control" type="password" name="password" placeholder="Changer le mot de passe"/>
     </div>
     <div class="form-group accountForm">
     <input class="form-control" type="password" name="password_confirm" placeholder="Confirmer le mot de passe"/>
-    <span class='formErrors'><?php if(isset ($errors)){echo $errors;}?></span><br/>
+    <span class='formValide'><?php if(isset ($errors)){echo $errors;}?></span><br/><br/>
     </div>
  
-    <button class="btn btn-primary">Changer le mot de passe</button>
+    <button class="btn btn-primary">Changer le mot de passe</button><br/><br/>
     <button class="btn btn-danger" name="deleteUser">Effacer le compte</button>
 
 </form>

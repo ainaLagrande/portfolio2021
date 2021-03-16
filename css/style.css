@@ -28,6 +28,11 @@ nav ul li {
   font-size: 1.2em;
   display: flex;
 }
+nav ul li span {
+  cursor: pointer;
+  color: #383838;
+  margin-left: 20px;
+}
 nav ul li a {
   text-decoration: none;
   color: black;
@@ -52,17 +57,25 @@ nav ul li a:hover {
 }
 
 .sub-menu {
-  flex-direction: column;
-  justify-content: space-around;
   display: none;
   cursor: pointer;
-  padding-top: 100px;
-  text-align: center;
+  position: absolute;
+  top: 5%;
+  background-color: #EED6D3;
+  height: 20%;
 }
-.sub-menu span {
-  cursor: pointer;
-  color: #383838;
-  margin-left: 20px;
+.sub-menu li {
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+.sub-menu li a {
+  padding: 12px 16px;
+  display: block;
+  width: 100%;
 }
 
 [class*=reveal-] {
@@ -86,6 +99,14 @@ nav ul li a:hover {
 
 .reveal-3 {
   transition-delay: 2.5s;
+}
+
+.formErrors {
+  color: red;
+}
+
+.formValide {
+  color: green;
 }
 
 .intro {
@@ -142,52 +163,7 @@ header .photoPro {
   border-radius: 0px 0px 150px 0px;
   background-color: #A4A4A4;
   border: 3px solid #949494;
-}
-
-.crud-text {
-  width: 50%;
-  height: 600px;
-  font-size: 1.3em;
-}
-.crud-text h4 {
-  padding-top: 180px;
-}
-.crud-text h4, .crud-text ol {
-  text-align: center;
-  width: 70%;
-}
-
-.crud-text2 {
-  height: 600px;
-  margin-left: 800px;
-  margin-top: -350px;
-  font-size: 1.3em;
-}
-.crud-text2 h4 {
-  padding-top: 150px;
-  margin-left: 150px;
-  width: 40%;
-}
-.crud-text2 ul {
-  margin-left: 150px;
-}
-
-form {
-  width: 60%;
-  margin-left: 300px;
-  margin-bottom: 200px;
-  margin-top: 200px;
-}
-form .btn {
-  width: 100%;
-  background-color: #EED6D3;
-  border: 1px #949494 solid;
-  color: black;
-}
-form .btn:hover {
-  background-color: #949494;
-  border: 1px solid #EED6D3;
-  color: black;
+  object-fit: cover;
 }
 
 .text-scroll {
@@ -297,11 +273,13 @@ form .btn:hover {
   padding: 10px;
   border-radius: 100px 100px 100px 100px;
   cursor: pointer;
+  object-fit: cover;
 }
 .birth-box .birth .hover-img-effect {
   height: 800px;
   border-radius: 100px 100px 100px 100px;
   border: 1px solid #EED6D3;
+  object-fit: cover;
   padding: 10px;
 }
 .birth-box .birth .break-img {
@@ -310,6 +288,7 @@ form .btn:hover {
   width: 500px;
   border: 1px solid #EED6D3;
   padding: 10px;
+  object-fit: cover;
 }
 .birth-box .birth .back-img {
   position: absolute;
@@ -350,6 +329,7 @@ section h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  color: aqua;
 }
 
 /**********FORM SECTION***************/
@@ -475,6 +455,74 @@ section h3 {
     transform: translate3d(var(--move-final), 0, 0);
   }
 }
+.crud-text {
+  width: 50%;
+  height: 600px;
+  font-size: 1.3em;
+}
+.crud-text h4 {
+  padding-top: 180px;
+}
+.crud-text h4, .crud-text ol {
+  text-align: center;
+  width: 70%;
+}
+
+.crud-text2 {
+  height: 600px;
+  margin-left: 800px;
+  margin-top: -350px;
+  font-size: 1.3em;
+}
+.crud-text2 h4 {
+  padding-top: 150px;
+  margin-left: 150px;
+  width: 40%;
+}
+.crud-text2 ul {
+  margin-left: 150px;
+}
+
+form {
+  width: 60%;
+  margin-left: 300px;
+  margin-bottom: 200px;
+  margin-top: 200px;
+}
+form .btn {
+  width: 100%;
+  background-color: #EED6D3;
+  border: 1px #949494 solid;
+  color: black;
+}
+form .btn:hover {
+  background-color: #949494;
+  border: 1px solid #EED6D3;
+  color: black;
+}
+
+.text-account {
+  padding-top: 100px;
+  width: 100vh;
+}
+.text-account p {
+  position: relative;
+  top: 0%;
+  left: 35%;
+  width: 100%;
+  text-align: center;
+}
+
+.cible-page {
+  height: 100vh;
+}
+.cible-page h3 {
+  position: relative;
+  left: 0%;
+  top: 50%;
+  text-align: center;
+}
+
 /*# sourceMappingURL=style.scss.map */
 
 /*# sourceMappingURL=style.css.map */

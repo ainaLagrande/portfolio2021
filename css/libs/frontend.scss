@@ -123,11 +123,13 @@
             padding: 10px;
             border-radius: 100px 100px 100px 100px;
             cursor: pointer;
+            object-fit: cover;
           }
           .hover-img-effect{
             height: 800px;
             border-radius: 100px 100px 100px 100px;
             border:1px solid $primary-pink-color;
+            object-fit: cover;
             padding: 10px;
           }
           .break-img{
@@ -136,6 +138,7 @@
             width: 500px;
             border:1px solid $primary-pink-color;
             padding: 10px;
+            object-fit: cover;
             // background-image: url(../img/take.svg);
           }
 
@@ -183,6 +186,7 @@ section{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    color: aqua;
   }
 }
 /**********FORM SECTION***************/
@@ -232,6 +236,7 @@ section{
     color: rgba(0, 0, 0, 1);
   }
 }
+
 /*********FORM ANIMATION**************/
 .formLabel
 {

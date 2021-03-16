@@ -17,10 +17,9 @@ nav
     background-color: $primary-pink-color;
     height: 80px;
     border-bottom: 2px solid $primary-pink-color;
-    // position: fixed;
     width:100%;
     z-index: 5;
-
+    
     ul{
         display: flex;
         justify-content: space-around;
@@ -30,12 +29,15 @@ nav
             list-style-type: none;
             font-size: 1.2em;
             display: flex;
-            
 
+            span{
+                cursor: pointer;
+                color: $primary-drak-color;
+                margin-left: 20px;
+            }
             a{
                 text-decoration: none;
                 color: black;
-                
 
                 &:hover{
                     text-decoration: none;
@@ -44,7 +46,6 @@ nav
             }
         }
     }
-     
 }
 //************** LINK ANIMATION ***********
 .link-animation::after{
@@ -54,29 +55,38 @@ nav
     height: 2px;
     background-color: $primary-drak-color;
     transition:width .3s;
-  
   }
   .link-animation:hover::after{
     width: 100%;
     transition: width .3s;
   }
   
-//************************ SUB-MENU***********
+//*************** SUB-MENU***********
 .sub-menu
 {
-    flex-direction: column;
-    justify-content: space-around;
     display: none;
     cursor: pointer;
-    padding-top: 100px;
-    text-align: center;
+    position: absolute;
+    top:5%;
+    background-color: $primary-pink-color;
+    height: 20%;
+    // animation: sub-menu-animation 1s ease-in-out;
+    li{
+        position: relative;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top:20px;
 
-    span{
-        cursor: pointer;
-        color: $primary-drak-color;
-        margin-left: 20px;
-    }
+        a{
+            padding: 12px 16px;
+            display: block;
+            width: 100%;
+        }
+    } 
 }
+
 // ******REVEAL TRANSITION
 
 [class*="reveal-"]
@@ -99,7 +109,13 @@ nav
 .reveal-3{
  transition-delay: 2.5s;
 }
+//FORM PHP ERROS AND VALIDATION
 
-
-
-
+.formErrors
+{
+    color:red;
+}
+.formValide
+{
+color:green;
+}

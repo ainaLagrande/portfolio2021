@@ -7,6 +7,7 @@ $pages = [
     'login' => 'controllers/login_controller.php',
     'logout' => 'controllers/logout_controller.php',
     'account' => 'controllers/account_controller.php',
+    'cible' => 'controllers/cible_controller.php',
 ];
 
 $page = $pages['homepage'];
