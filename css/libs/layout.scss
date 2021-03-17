@@ -7,46 +7,107 @@
 }
 $primary-pink-color:#EED6D3;
 $primary-drak-color:#383838;
+html,body{
+  overflow-x: hidden;
+}
 body
 {
-    background-color: $primary-drak-color;
-    color:$primary-pink-color;
+  background-color: $primary-drak-color;
+  color:$primary-pink-color;
 }
-nav
-{
-    background-color: $primary-pink-color;
-    height: 80px;
-    border-bottom: 2px solid $primary-pink-color;
-    width:100%;
-    z-index: 5;
-    
+
+nav{
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  background: $primary-pink-color;
+  display: none;
+  top: 0;
+  left: 0;
+  position: fixed;
+  transition: all 1s ease;
     ul{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 100%;
-        li{
-            list-style-type: none;
-            font-size: 1.2em;
-            display: flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      li{
+          list-style-type: none;
+          font-size: 1.2em;
+          display: flex;
 
-            span{
-                cursor: pointer;
-                color: $primary-drak-color;
-                margin-left: 20px;
-            }
-            a{
-                text-decoration: none;
-                color: black;
+          span{
+              cursor: pointer;
+              color: $primary-drak-color;
+              margin-left: 20px;
+          }
+          a{
+              text-decoration: none;
+              color: black;
 
-                &:hover{
-                    text-decoration: none;
-                    color: black;
-                }
-            }
-        }
+              &:hover{
+                  text-decoration: none;
+                  color: black;
+              }
+          }
+      }
     }
 }
+//********** BURGER MENU **************
+.btn_menu{
+  display: block;
+  position: fixed;
+  right: 10%;
+  top: 10%;
+  width: 50px;
+  height: 20px;
+  cursor: pointer;
+  z-index:5;
+
+  .toggle{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.toggle, .toggle::before, .toggle::after{
+  width: 100%;
+  height: 2px;
+  background: $primary-pink-color;
+  display: block;
+  position: absolute;
+  transition: all .25s ease-in-out;
+}
+.toggle::before, .toggle::after{
+  content: '';
+}
+.toggle::before{
+  top: -10px;
+}
+.toggle::after{
+  bottom: -10px;
+}
+.active-toggle{
+  background: transparent;
+}
+.active-toggle::before{
+  top: 0;
+  transform: rotate(45deg);
+  background-color:$primary-drak-color;
+}
+.active-toggle::after{
+  bottom: 0;
+  transform: rotate(-40deg);
+  background-color:$primary-drak-color;
+
+}
+
+.openNav{
+  display: block;
+}  
+  
 //************** LINK ANIMATION ***********
 .link-animation::after{
     content:'';
@@ -67,10 +128,10 @@ nav
     display: none;
     cursor: pointer;
     position: absolute;
-    top:5%;
+    top:65%;
     background-color: $primary-pink-color;
     height: 20%;
-    // animation: sub-menu-animation 1s ease-in-out;
+
     li{
         position: relative;
         text-align: left;
@@ -109,13 +170,20 @@ nav
 .reveal-3{
  transition-delay: 2.5s;
 }
-//FORM PHP ERROS AND VALIDATION
 
+//FORM PHP ERROS AND VALIDATION
 .formErrors
 {
-    color:red;
+  color:red;
 }
 .formValide
 {
 color:green;
 }
+
+
+
+
+  
+
+  

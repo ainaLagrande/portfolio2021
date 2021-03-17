@@ -2,7 +2,7 @@
 .text-scroll
  {
    h1{
-    font-size:8em;
+    font-size:5em;
    }
   height: 100vh;
   display: flex;
@@ -28,80 +28,54 @@
  .img-portfolio
  {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 1% 1%;
-    margin-bottom: 400px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+  
 
    .img1, .img2, .img3
    {
-     width:600px;
-     height: 900px;
+     max-width:100%;
+     height: 600px;
      cursor: pointer;
      position: relative;
      border:1px solid $primary-pink-color;
+     object-fit: cover;
      
    }
    .img1
    {
-     margin: 300px 0px 0px 200px;
      background-image: url(../img/me56.jpg);
-     border-radius: 0px 0px 0px 200px;
    }
    .img2
    {
      background-image: url(../img/me.jpg);
-     border-radius: 0px 200px 0px 0px;
    }
    .img3
    {
      background-image: url(../img/me77.jpg);
-     border-radius: 0px 0px 200px 0px;
-     grid-column: 2/2;
-     margin-top: -200px;
    }
- }
- #autotext
- {
-   letter-spacing: 0.5em;
-   margin-top: -1500px;
-   margin-left: 200px;
-   width: 600px;
-   color: $primary-pink-color;
  }
 
 //***********************  BIRTH BOX  ********************
  .birth-box
  {
-  margin:600px 0px 400px 10px;
-  padding: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  margin:-800px 0px 400px 10px;
   border: 3px $primary-drak-color solid;
   border-radius: 100px 100px 100px 100px;
   cursor: pointer;
+  width: 100%;
 
    .birth
    {
-     display: flex;
-     flex-direction:row-reverse;
-     justify-content: space-around;
-     align-items: center;
      width: 100%;
-     padding-right: 50px;
-     padding-top: 50px;
      position: relative;
+     right: 2%;
      transition: ease-in-out 1s;
     
-      &:nth-child(3)
-      {
-        display: flex;
-        flex-direction: row;
-      }
-
         h5{
-          width: 40%;
+          width: 100%;
+          text-align: center;
           a{
             color: $primary-pink-color;
 
@@ -112,11 +86,10 @@
           .link-animation::after{
             background-color: $primary-pink-color;
           }
-          
         }
         .little-me-img
           {
-            width: 45%;
+            width: 100%;
             height: 550px;
             margin-bottom: 20px;
             border:1px solid $primary-pink-color;
@@ -126,7 +99,8 @@
             object-fit: cover;
           }
           .hover-img-effect{
-            height: 800px;
+            height: 550px;
+            width: 100%;
             border-radius: 100px 100px 100px 100px;
             border:1px solid $primary-pink-color;
             object-fit: cover;
@@ -134,25 +108,27 @@
           }
           .break-img{
             border-radius: 50%;
-            height: 500px;
-            width: 500px;
+            height: 550px;
+            width: 100%;
             border:1px solid $primary-pink-color;
             padding: 10px;
             object-fit: cover;
-            // background-image: url(../img/take.svg);
           }
-
           .back-img{
-            position:absolute;
-            margin:20px 800px 0px 0px;
-            // padding: 50px;
-            width: 1050px;
-            height:1050px;
+            margin:-500px 0px 0px 0px;
+            width: 100%;
+            height:100%;
           }
+   }
+   .parcour{
+     margin-top: 900px;
    }
  }
 
 // **********SKILLS  ***********
+.skills-items,#scene{
+  display: none;
+}
 
 .skills-text
 {
@@ -160,45 +136,53 @@
   width: 80%;
   left: 10%;
   text-align: center;
-  margin-bottom: 250px;
-  margin-top: 250px;
+  margin-top: -200px;
 }
 section{
-  background-image: url(../img/svg4.svg);
+ display: none;
+}
+.skills
+{
+  margin-top: 150px;
+  margin-bottom: 150px;
+  flex-direction: column;
+}
+.skills h3
+{
+  margin-left: 20px;
+}
+.HTMLProgressBar,.CSSProgressBar,.JSProgressBar,.PHPProgressBar,.SQLProgressBar,.GITProgressBar
+{
   position: relative;
   width: 100%;
-  height: 85vh;
-  overflow:hidden;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin-bottom: 500px;
-
-  h2{
-    position: absolute;
-    font-size: 5em;
-  }
-   h3{
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    color: aqua;
-  }
+  height: 30px;
+  margin-top: 20px;
+  background-color:white;
+  border-radius: 10px;
+  float:center;
 }
+.myBarHTML,.myBarCSS,.myBarJS,.myBarPHP,.myBarSQL,.myBarGIT
+{
+  position: absolute;
+  background-color: $primary-pink-color;
+  height: 100%;
+  border-radius: 10px;
+  transition: ease-in-out 2s;
+}
+.labelCode
+{
+  margin-left: 20px;
+  color: black;
+  font-size: 1.2em;
+}
+
 /**********FORM SECTION***************/
 #contact{
-  display: flex;
-  justify-content: space-around;
   width: 100%;
   height: 100vh;
 
   form{
-    margin-top:0px;
-    margin-left: 0px;
+    position: relative;
   }
 }
 .forms
@@ -212,7 +196,7 @@ section{
     display: flex;
     flex-direction:column;
     justify-content: flex-start;
-    width: 80%;
+    width: 100%;
     height: 40px;
     border:transparent;
     border-bottom: 1px solid rgba(0, 0, 0, 1);
@@ -223,7 +207,7 @@ section{
 }
 .submitButton
 {
-  width: 80%;
+  width: 100%;
   height: 40px;
   border-radius: 20px;
   border:1px solid $primary-drak-color;
@@ -245,10 +229,12 @@ section{
   transform: translateY(-50%);
   transition: all 0.3s ease-out;
 }
+
  .forms:focus-within .formLabel,
  .forms.activeInput .formLabel
  {
   margin-top:-20px;
+  color:$primary-pink-color;
  }
 
 
@@ -265,7 +251,6 @@ section{
     background-color: $primary-pink-color;
   }
 }
-
 .social-networks{
   margin-top: 50px;
   ul{
@@ -314,7 +299,6 @@ section{
     padding: 0 2vw;
   }
 }
-
 @keyframes marquee {
   0% {
       transform: translate3d(var(--move-initial), 0, 0);

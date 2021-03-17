@@ -8,20 +8,6 @@ tl.to(".slider", { y: "-100%", duration:1.5, delay:0.5 });
 tl.to(".intro", { y: "-100%", duration:1 },"-=1.5");
 
 
-// *********************SUBMENU*******************
-function subMenu()
-{
-  let subMenu = document.querySelector('.sub-menu');
-
-  if (subMenu.style.display === "block")
-  {
-    subMenu.style.display = "none";
-  }
-  else
-  {
-    subMenu.style.display = "block";
-  }
-}
 
 
 // *********** REVEAL  SECTION**********************
@@ -49,21 +35,22 @@ document.querySelectorAll('[class*="reveal-"]').forEach(function(r){
 })
 
 
-// ********** SKILS PARALLAX ****************
+// ********** SKILS ANIMATION ****************
 
-document.addEventListener("mousemove" ,parallax);
+window.onload = function(){
+	let cube = document.getElementById('box-container');
+	let position = 0;
+	// the move variable sets the interval for how often the animateCube function should run. Currently set to every 10 miliseconds
+	let move = setInterval(animateCube, 10)
+	function animateCube(){
+	  position += .2; // increments the position for how much the cube should rotate
+	  let rotateX = 'rotateX(' + position + 'deg)'; // increments the X position
+	  let rotateY = 'rotateY(' + position + 'deg)'; // increments the Y position
+	  cube.style.transform = rotateX + " " + rotateY; // selects the elements css & updates
+	}
+  }
+  
 
-function parallax(e){
-	this.querySelectorAll('.layer').forEach(layer => {
-		const speed = layer.getAttribute('data-speed')
-
-		const x =(window.innerWidth -e.pageX*speed)/100;
-		const y =(window.innerHeight -e.pageY*speed)/100;
-
-		layer.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
-
-	});
-};
 
 
 // *************** FORM ANIMATION ****************
@@ -82,8 +69,5 @@ document.addEventListener('input', function(e) {
     }
 	
 });
-
-
-
 
 
