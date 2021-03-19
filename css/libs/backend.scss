@@ -3,7 +3,6 @@
     margin-top: 100px;
     width: 100%;
     font-size: 1.3em;
-
     h4,ol{
         text-align: center;
     }
@@ -14,6 +13,11 @@
     text-align: center;
     font-size: 1.3em;
     margin-top: 100px;
+}
+.form-container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 form{
     width: 90%;
@@ -38,6 +42,20 @@ form{
         }
     }
 }
+@media screen and (min-width : 1024px)  /*laptop/descktop*/
+{
 
+    .title{
+        margin-top: 150px;
+    }
+    // ***********FORM***********
+    .form-container{
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
+    }
+    form{
+        width: 100%;
+    }
 
-
+}

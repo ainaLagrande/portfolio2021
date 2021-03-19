@@ -2,4 +2,4 @@
 
 declare(strict_types=1);
 
-require './views/cible.phtml';
+require '../portfolio/views/cible.phtml';

@@ -1,13 +1,15 @@
 <?php
 
 declare(strict_types=1);
- 
+
+//************** ACCESS LIMIT 
+
 $user_id = $_SESSION['id'];
  if(!isset($_SESSION['auth'])) {//si utilisateur essaye d'acceder a la page ss s'etre connecté
         header('Location:index.php?page=login');
     }
     
-    // *************MODIFICATION DU MOT DE PASSE
+    // *************PASSWORD MODIFICATION
 
 if(!empty($_POST))
 {
@@ -26,7 +28,7 @@ if(!empty($_POST))
     }
 }
 
-//*******************SUPPRIMER L'UTILISATEUR
+//*******************USER DELETE
 if(isset($_POST['deleteUser'])) {
     
      $pdo->prepare('DELETE FROM users WHERE id = :id')->execute(['id'=> $user_id]);
@@ -35,4 +37,4 @@ if(isset($_POST['deleteUser'])) {
 }
 
 
-require './views/account.phtml';
+require '../portfolio/views/account.phtml';

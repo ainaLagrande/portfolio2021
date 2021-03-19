@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-require './models/inscription.php';
+require '../portfolio/models/inscription.php';
 
 
-
+//**********  USER INSCRIPTION CONTROLLER
 if(!empty($_POST))
 {
     $errors = array();
@@ -22,15 +22,15 @@ if(!empty($_POST))
         }
     }
     
-    if(empty($_POST['password']))//validation de mdp
+    if(empty($_POST['password']))//password validation
     {
         $errors = "*Mot de passe  n'est pas valide*";
     }
     
-    if(empty($errors))//s'il n'ya pas d'erreurs on insére cela a sql
+    if(empty($errors))
     {
         registerValidate();
     }
 }
 
-require './views/backend.phtml';
+require '../portfolio/views/backend.phtml';

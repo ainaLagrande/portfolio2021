@@ -8,15 +8,20 @@
   </div>
 </div>
 
+
 <!-- IMG PORTFOLIO  -->
 
     <div class="img-portfolio">
       <div class="img1"></div>
       <div class="img2"></div>
       <div class="img3"></div>
+
+      <div class="autotext-container">
+        <h2 id="autotext"></h2>
+      </div>
     </div>
 
-<h2 id="autotext"></h2>
+
 
   <!-- PARCOURS  -->
 <div class="birth-box">
@@ -29,6 +34,8 @@
     <span>Parcours</span>
   </div>
 </div>
+
+<!--************* FIRST SECTION  ***************-->
 
   <div class="birth reveal-">
       <h5>Je m'appelle Aïna AKAGADZHIEVA.<br/>
@@ -43,6 +50,8 @@
       <img class="little-me-img" src="img/little3.jpg" alt="photo d'enfance">
   </div>
 
+<!--************* SECOND SECTION  ***************-->
+
    <div class="birth reveal-">
       <h5> J'ai fait mes études de <strong>cuisine</strong>  à <strong>Saint Méen le Grand</strong>  et
        j'ai vite gravé les échelons pour au final devenir <strong>chef de partie</strong> 
@@ -54,6 +63,8 @@
       <img class="hover-img-effect" src="img/kit1.jpg" alt="">
   </div>
 
+<!--************* THIRD SECTION  ***************-->
+
   <div class="birth reveal-">
       <h5>Puis,
         j'ai pris une année de repos pour <strong>remplir les objectifs</strong>  que la vie de chef ne me permettait pas de
@@ -63,33 +74,30 @@
           <li>J'ai voyagé.</li>
           <li> J'ai appris un nouveau métier, celui de développeuse Web.</li>
         </ul>
-      </h5>
+        </h5>
+      
       <img class="break-img" src="img/book.jpg" alt="image de livre">
-      <img class="back-img" src="img\take1.svg" alt="image svg take it easy">
+      <img class="back-img" src="img/take1.svg" alt="image svg take it easy">
   </div>
 </div>
 
 </div>
 
 
-
-
 <!-- SKILLS  -->
- <!-- sur cette section rajouter un truc en js comme ouverture de scene -->
- <!-- en remontant la page la nav qui s'affiche -->
-
  
   <div class="skills-text reveal-">
     <h5> J'ai commencé comme tout le monde sur <strong>openclassroom en autodidacte</strong>  pendant 7 mois.</h5>
     <h5>Puis j'ai voulu aller plus loin et j'ai donc fait une <strong>formation</strong>  intense de 3 mois
-   avec <strong>3 W Académie.</strong></h5> 
-   <h5>Aujourd'hui, je suis développeuse Web Junior <strong>diplômée</strong>.</h5>
-   <h5>J'ai autant de compétences en <strong>Front</strong> qu'en <strong> Back</strong>.</h5>
-   <h5>Je ne suis pas la plus forte, mais <strong>je fais de mon mieux</strong> pour avoir le résultat.</h5>
-   <h5> J'imagine que mon premier boulot me dirigera vers la développeuse que je deviendrais.</h5>
-   <h5>Je vous avoue que je doute beaucoup de mes capacités, j'ai une sorte de syndrome d'imposteur.</h5>
-   <h5>Mais j'ai décidé d'aller jusqu'au bout de ce parcours parce que j'en suis capable.</h5>
+    avec <strong>3 W Académie.</strong></h5> 
+    <h5>Aujourd'hui, je suis développeuse Web Junior <strong>diplômée</strong>.</h5>
+    <h5>J'ai autant de compétences en <strong>Front</strong> qu'en <strong> Back</strong>.</h5>
+    <h5>Je ne suis pas la plus forte, mais <strong>je fais de mon mieux</strong> pour avoir le résultat.</h5>
+    <h5> J'imagine que mon premier boulot me dirigera vers la développeuse que je deviendrais.</h5>
+    <h5>Je vous avoue que je doute beaucoup de mes capacités, j'ai une sorte de syndrome d'imposteur.</h5>
+    <h5>Mais j'ai décidé d'aller jusqu'au bout de ce parcours parce que j'en suis capable.</h5>
   </div>
+
   <!-- BANDE DEROULANTE -->
   <div class="marquee">
   <div class="marquee__inner" aria-hidden="true">
@@ -124,7 +132,7 @@
   </div>
 
 
-
+<!-- SKILLS MOBILE ANIMATION -->
 <div class="mobil-first-bar-prgress">
   <div class="skills">
   <!-- ******************************HTML PROGRESS BAR*************************** -->
@@ -171,9 +179,11 @@
   </div>
   </div>
 </div>
-<script src="./js/progress-bar.js"></script>
+<script src="../portfolio/js/progress-bar.js"></script>
 
  <!-- ****************** CONTACT ****************** -->
+  <!-- BANDE DEROULANTE -->
+
  <div id="contact-location" class="marquee">
   <div class="marquee__inner" aria-hidden="true">
     <span>Contact</span>
@@ -182,39 +192,39 @@
     <span>Contact</span>
   </div>
 </div>
+  <!-- CONTACT FORM -->
 
 <div id="contact">
-  <!-- onformanimation changement de couleurs -->
-
     <form  method="POST" class="contactForm">
       <div class="forms">
-        <label class="formLabel">Nom</label>
-        <input class="nameInput" name="name" type="text" >
+        <label class="formLabel" for="name">Nom</label>
+        <input class="nameInput" name="name" type="text" id="name" >
         <span class='formErrors'><?php if(isset ($errorName)){echo $errorName;}?></span><br/>
     <span class='formErrors'><?php if(isset ($errorNameLenght)){echo $errorNameLenght;}?></span>
       </div>
     
       <div class="forms">
-        <label class="formLabel">Email</label>
-        <input class="emailInput" name="email" type="email" >
+        <label class="formLabel" for="email">Email</label>
+        <input class="emailInput" name="email" type="email" id="email" >
         <span class='formErrors'><?php if(isset ($errorEmail)){echo $errorEmail;}?></span>
       </div>
 
       <div class="forms">
-        <label class="formLabel">Tel:</label>
-        <input  class="phoneInput" name="phone" type="tel" >
+        <label class="formLabel" for="phone">Tel:</label>
+        <input  class="phoneInput" name="phone" type="tel" id="phone" >
         <span class='formErrors'><?php if(isset ($errorPhone)){echo $errorPhone;}?></span>
       </div>
 
       <div class="forms">
-        <label class="formLabel">Message</label>
-      <textarea class="textareaInput" type="text" name="message" ></textarea>
+        <label class="formLabel" for="message">Message</label>
+      <textarea class="textareaInput" type="text" name="message" id="message" ></textarea>
       <span class='formErrors'><?php if(isset ($errorMessage)){echo $errorMessage;}?></span>
      <span class='formErrors'><?php if(isset ( $emptyError)){echo  $emptyError;}?></span>
       </div>
       <button name="contactFormButton" type="submit" class="submitButton">Envoyer</button>
     </form>
 
+  <!-- CONTACT INFO  SECTION -->
   <div class="infos-contact reveal-">
     <p>Sinon je suis présente sur les réseaux sociaux </p>
     <p>Je t'invite également à consulter mon compte GitHub </p> 
@@ -222,6 +232,8 @@
     <p>Mail:ainapukipuki@gmail.com</p>
     <p>Site Web: <a href="https://www.ainaweb.site/" class="link-animation">www.ainaweb.site</a></p>
 
+
+  <!-- SOCIAL NETWORKS -->
       <div class="social-networks">
         <ul>
           <li><a href="https://www.linkedin.com/in/a%C3%AFna-lagrande-9683801b9/"><i class="fab fa-linkedin fa-3x"></i></a></li>
@@ -233,24 +245,3 @@
       </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-<!-- <p>
-
-
-   J'imagine que mon premier boulot me dirigera vers la développeuse que je devienderai
-   Je vous avoue que je doute beaucoup de mes capacités surtout quand je vois mes collegues qui me semblent etre 
-   plus competens que moi .
-   Mais j'ai decidé d'aller jusqu'au bout de ce parcours
-   Parcequ'a vrai dire une fois que je l'ai decidé il n'ya plus de retour en arriere.
-   Tout en bas laisser les langues centre d'interet et contact
-</p> -->

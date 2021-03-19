@@ -2,4 +2,4 @@
 
 declare(strict_types=1);
 
-require './views/layout.phtml';
+require '../portfolio/views/layout.phtml';

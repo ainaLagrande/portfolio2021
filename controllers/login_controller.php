@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-
+// USER VERIFICATION 
 if(!empty($_POST) && !empty($_POST['userName']) && !empty($_POST['password'])) {
 
     $req = $pdo->prepare('SELECT id,userName,password FROM users WHERE (userName = :userName)');
@@ -27,4 +27,4 @@ if(!empty($_POST) && !empty($_POST['userName']) && !empty($_POST['password'])) {
     }
 }
 
-require './views/login.phtml';
+require '../portfolio/views/login.phtml';

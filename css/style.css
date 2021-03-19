@@ -175,6 +175,28 @@ nav ul li a:hover {
   color: green;
 }
 
+@media screen and (min-width: 1024px) {
+  .btn_menu, .toggle {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    position: relative;
+    height: 80px;
+    border-bottom: 2px solid #EED6D3;
+    z-index: 1;
+  }
+  nav ul {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .sub-menu {
+    background-color: #EED6D3;
+    height: 160px;
+  }
+}
 .intro {
   background-color: #383838;
   position: fixed;
@@ -217,15 +239,20 @@ header {
   z-index: 2;
   width: 100%;
   height: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 header .homeText {
   margin-top: 150px;
 }
+header .img-homepage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 header .photoPro {
   max-width: 400px;
   height: 600px;
-  position: relative;
-  left: 5%;
   margin-top: 100px;
   border-radius: 0px 0px 150px 0px;
   background-color: #A4A4A4;
@@ -233,6 +260,11 @@ header .photoPro {
   object-fit: cover;
 }
 
+@media screen and (min-width: 1024px) {
+  header .homeText {
+    margin-top: 0px;
+  }
+}
 .text-scroll {
   height: 100vh;
   display: flex;
@@ -262,14 +294,17 @@ header .photoPro {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 0px 0px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 .img-portfolio .img1, .img-portfolio .img2, .img-portfolio .img3 {
   max-width: 100%;
-  height: 600px;
+  height: 100vh;
+  margin-top: 50px;
   cursor: pointer;
   position: relative;
   border: 1px solid #EED6D3;
-  object-fit: cover;
 }
 .img-portfolio .img1 {
   background-image: url(../img/me56.jpg);
@@ -489,6 +524,7 @@ section {
   margin-bottom: 150px;
   position: relative;
   overflow: hidden;
+  width: fit-content;
   --offset: 20vw;
   --move-initial: calc(-25% + var(--offset));
   --move-final: calc(-50% + var(--offset));
@@ -513,18 +549,9 @@ section {
     transform: translate3d(var(--move-final), 0, 0);
   }
 }
-@media screen and (min-width: 1023px) {
+@media (min-width: 1024px) {
   html, body {
-    min-width: 1024;
-    max-height: 100vh;
-    background-color: aqua;
-  }
-  html body, body body {
-    background-color: aqua;
-  }
-
-  .text-scroll h1 {
-    font-size: 8em;
+    min-width: 1024px;
   }
 
   .img-portfolio {
@@ -533,9 +560,12 @@ section {
     grid-template-rows: 1fr 1fr;
     gap: 1% 1%;
     margin-bottom: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
   }
   .img-portfolio .img1, .img-portfolio .img2, .img-portfolio .img3 {
-    width: 600px;
+    max-width: 550px;
     height: 900px;
   }
   .img-portfolio .img1 {
@@ -551,17 +581,25 @@ section {
     margin-top: -200px;
   }
 
-  #autotext {
+  .autotext-container {
+    position: relative;
+    width: 100%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-row: 2/2;
+  }
+  .autotext-container #autotext {
     letter-spacing: 0.5em;
-    margin-top: -1500px;
-    margin-left: 200px;
-    width: 600px;
+    margin-top: -500px;
+    margin-right: 400px;
+    width: 50%;
     color: #EED6D3;
   }
 
   .birth-box {
-    margin: 600px 0px 400px 10px;
-    padding: 50px;
+    margin: -1000px 0px 0px 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -600,6 +638,15 @@ section {
 
   .mobil-first-bar-prgress {
     display: none;
+  }
+
+  .skills-items, #scene {
+    display: block;
+  }
+
+  .skills-text {
+    position: relative;
+    margin-top: 350px;
   }
 
   .skills-items {
@@ -706,7 +753,7 @@ section {
 }
 @media screen and (min-width: 768px) and (max-height: 1024px) {
   .img-portfolio {
-    margin-bottom: 2500px;
+    margin-bottom: -500px;
   }
   .img-portfolio .img1, .img-portfolio .img2, .img-portfolio .img3 {
     width: 600px;
@@ -728,6 +775,10 @@ section {
   #autotext {
     margin-top: -2400px;
     margin-left: 100px;
+  }
+
+  .birth-box {
+    margin-top: 0px;
   }
 
   .birth .hover-img-effect {
@@ -842,6 +893,12 @@ section {
   margin-top: 100px;
 }
 
+.form-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 form {
   width: 90%;
   position: relative;
@@ -864,6 +921,21 @@ form .btn:hover {
   color: black;
 }
 
+@media screen and (min-width: 1024px) {
+  .title {
+    margin-top: 150px;
+  }
+
+  .form-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+
+  form {
+    width: 100%;
+  }
+}
 .text-account {
   padding-top: 100px;
 }

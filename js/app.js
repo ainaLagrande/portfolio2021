@@ -8,8 +8,6 @@ tl.to(".slider", { y: "-100%", duration:1.5, delay:0.5 });
 tl.to(".intro", { y: "-100%", duration:1 },"-=1.5");
 
 
-
-
 // *********** REVEAL  SECTION**********************
 
 const threshold = .1
@@ -40,13 +38,13 @@ document.querySelectorAll('[class*="reveal-"]').forEach(function(r){
 window.onload = function(){
 	let cube = document.getElementById('box-container');
 	let position = 0;
-	// the move variable sets the interval for how often the animateCube function should run. Currently set to every 10 miliseconds
+
 	let move = setInterval(animateCube, 10)
 	function animateCube(){
-	  position += .2; // increments the position for how much the cube should rotate
-	  let rotateX = 'rotateX(' + position + 'deg)'; // increments the X position
-	  let rotateY = 'rotateY(' + position + 'deg)'; // increments the Y position
-	  cube.style.transform = rotateX + " " + rotateY; // selects the elements css & updates
+	  position += .2; 
+	  let rotateX = 'rotateX(' + position + 'deg)'; 
+	  let rotateY = 'rotateY(' + position + 'deg)';
+	  cube.style.transform = rotateX + " " + rotateY;
 	}
   }
   

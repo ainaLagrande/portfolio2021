@@ -2,8 +2,6 @@
 
 declare(strict_types=1);
 
-require './models/contact.php';
-
 if(isset($_POST['contactFormButton']))
 {
 //********************* EMPTY VERIFICATION**************************************************
@@ -23,7 +21,20 @@ if(isset($_POST['contactFormButton']))
                     {
                          if (preg_match("#^0[1-68]([-. ]?[0-9]{2}){4}$#", $_POST['phone']))//*********** PHONE COHERENCE VERIFICATION********
                          {
-                               contactInsert();
+                            $emptyError= '*Veuillez remplir tous les champs*';
+                            $msg = $_POST['name'];
+                            $msg .=$_POST['email'];
+                            $msg .= $_POST['phone'];
+                            $msg .= $_POST['message'];
+                
+                            $recipient = "lagrande@ainaweb.site";
+                            $subject = "Formulaire du portfolio";
+                                            
+                            $mailheaders = "From: Le Formulaire de mon site<> \n";
+                            $mailheaders .= $_POST['email'];
+                                            
+                            mail($recipient, $subject, $msg, $mailheaders);
+                            header('location: index.php?page=cible');
                          }else
                          {
                               $errorPhone = "*Numéro Invalide*";
@@ -52,4 +63,4 @@ if(isset($_POST['contactFormButton']))
             $emptyError= '*Veuillez remplir tous les champs*';
         } 
 }
-require './views/frontend.phtml';
+require '../portfolio/views/frontend.phtml';

@@ -2,7 +2,8 @@
 
 declare(strict_types=1);
 
-function checkUser()//function pour verifier si l'utilisateur existe deja
+//*********  IF USER EXISTE 
+function checkUser()
 {
     
     require './core/connection.php';
@@ -11,20 +12,19 @@ function checkUser()//function pour verifier si l'utilisateur existe deja
     $user = $q->fetch(PDO::FETCH_ASSOC);
     $checkUser = $q->rowCount();
     
-    if($checkUser === 1)//si l'user existe déjà on affiche ce message la 
+    if($checkUser === 1)
         {
             return false;
 
         }
 }
-
-
-function registerValidate()//inserer les données d'inscription ds la base de données
+//************* USER INSERT FUNCTION 
+function registerValidate()
 {
     
      require './core/connection.php';
-     $sql = 'INSERT INTO users(userName, password) VALUES(:userName, :password)';//envoie les donées a mysql
-     $password = password_hash($_POST['password'], PASSWORD_ARGON2I);//cache le mdp
+     $sql = 'INSERT INTO users(userName, password) VALUES(:userName, :password)';
+     $password = password_hash($_POST['password'], PASSWORD_ARGON2I);//password hide
         
         $q = $pdo->prepare($sql);
         $q->execute([

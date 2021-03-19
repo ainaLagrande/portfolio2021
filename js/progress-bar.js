@@ -1,4 +1,4 @@
-//*******SKILLS PROGRESS BAR************
+
 
 //************************* HTML ******************
 let progressBarHTML = document.querySelector(".myBarHTML");

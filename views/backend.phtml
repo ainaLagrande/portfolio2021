@@ -1,5 +1,5 @@
-
-  <h1 class="text-center reveal-">Backend</h1>
+<!-- HEADER FROM BACKEND PAGE -->
+  <h1 class="text-center title reveal-">Backend</h1>
 
   <div class="crud-text reveal-">
       <h4>Le mieux pour que tu vois mes compétences en Backend, c'est de 
@@ -23,25 +23,29 @@
   </div>
 
   <h3 class="text-center">Donc ici vas suivre une page d'inscription, connexion et etc.</h3>
- 
+
+<div class="text-center mt-5">
+  <h2 id="register-location">INSCRIPTION</h2>
+</div>
 
 
-<h2 class="text-center mt-5" id="register-location">INSCRIPTION</h2>
-
-
+<!--***************** INSCRIPTION FORM   ****************-->
+<div class="form-container">
   <form id="crudForm" method="POST" action="index.php?page=backend#crudForm">
-      <div class="mb-3">
-        <label for="exampleInputEmail2" class="form-label">Pseudo</label>
-        <input type="text" name="userName" class="form-control" id="exampleInputEmail2">
-      </div>
+        <div class="mb-3">
+          <label for="exampleInputEmail2" class="form-label">Pseudo</label>
+          <input type="text" name="userName" class="form-control" id="exampleInputEmail2">
+        </div>
 
-      <div class="mb-3">
-        <label for="exampleInputPassword2" class="form-label">Password</label>
-        <input type="password" name="password" class="form-control" id="exampleInputPassword2">
-      </div>
-      <span class='formErrors'><?php if(isset ($errors)){echo $errors;}?></span><br/>
-      
-      <button type="submit" class="btn btn-primary">S'inscrire</button>
-  </form> 
+        <div class="mb-3">
+          <label for="exampleInputPassword2" class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" id="exampleInputPassword2">
+        </div>
+        <span class='formErrors'><?php if(isset ($errors)){echo $errors;}?></span><br/>
+        
+        <button type="submit" class="btn btn-primary">S'inscrire</button>
+    </form> 
+</div>
+
 
 

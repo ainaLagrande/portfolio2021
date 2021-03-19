@@ -7,7 +7,7 @@ let line2 = document.querySelector('.line-2');
 
 function textScroll(){
     let pos = window.scrollY;
-    line1.style.left = -pos * 0.7 +"px"; //a chaque fois ca rajoute un pixel
+    line1.style.left = -pos * 0.7 +"px";
     line2.style.left = pos * 0.7 +"px";
 }
 

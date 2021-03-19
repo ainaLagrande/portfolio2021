@@ -1,5 +1,5 @@
+<!--******************* WELCOM MESSAGE  ***********************-->
 <div class="text-account">
-
     <p>Bonjour <?= htmlspecialchars($_SESSION['auth']) ?></p>
     <p>Cela a  l'air simple, mais avant que tu puisses arriver sur cette page-là il m'a 
     fallu des heures de travail pour tout sécuriser et envoyer les informations dans la base de données.
@@ -12,24 +12,25 @@
     Puisqu'on apprend <strong> NEVER TRUST USER INPUT</strong> à part mettre des conditions d'insertion
     sur les input j'ai aussi utilisé les htmlspecialchars et un droit d'accès limité sur la page <strong>Mon compte</strong><p>
     <p>Ici, je te propose de tester tout ça en essayant de modifier ton mot de passe par exemple.</p>
-
 </div>
 
 <!-- ************** FORM FOR CHANGE PASSWORD ************  -->
-
-<form class="crudForm" method="POST">
-    <div class="form-group accountForm">
-        <input  class="form-control" type="password" name="password" placeholder="Changer le mot de passe"/>
-    </div>
-    <div class="form-group accountForm">
-    <input class="form-control" type="password" name="password_confirm" placeholder="Confirmer le mot de passe"/>
-    <span class='formValide'><?php if(isset ($errors)){echo $errors;}?></span><br/><br/>
-    </div>
- 
-    <button class="btn btn-primary">Changer le mot de passe</button><br/><br/>
-    <button class="btn btn-danger" name="deleteUser">Effacer le compte</button>
-
-</form>
+<div class="form-container">
+    <form class="crudForm" method="POST">
+        <div class="form-group accountForm">
+            <label for="exampleInputConfirmation1" class="form-label">Confirmer le mot de passe</label>
+            <input  class="form-control" type="password" name="password" id="exampleInputConfirmation1" />
+        </div>
+        <div class="form-group accountForm">
+        <label for="exampleInputConfirmation2" class="form-label">Confirmer le mot de passe</label>
+        <input class="form-control" type="password" name="password_confirm" id="exampleInputConfirmation2" />
+        <span class='formValide'><?php if(isset ($errors)){echo $errors;}?></span><br/><br/>
+        </div>
+    
+        <button class="btn btn-primary">Changer le mot de passe</button><br/><br/>
+        <button class="btn btn-danger" name="deleteUser">Effacer le compte</button>
+    </form>
+</div>
 
 
     

@@ -1,13 +1,13 @@
 <?php
 
 $pages = [
-    'homepage' => './controllers/homepage_controller.php',
-    'backend' => './controllers/backend_controller.php',
-    'frontend' => './controllers/frontend_controller.php',
-    'login' => 'controllers/login_controller.php',
-    'logout' => 'controllers/logout_controller.php',
-    'account' => 'controllers/account_controller.php',
-    'cible' => 'controllers/cible_controller.php',
+    'homepage' => '../portfolio/controllers/homepage_controller.php',
+    'backend' => '../portfolio/controllers/backend_controller.php',
+    'frontend' => '../portfolio/controllers/frontend_controller.php',
+    'login' => '../portfolio/controllers/login_controller.php',
+    'logout' => '../portfolio/controllers/logout_controller.php',
+    'account' => '../portfolio/controllers/account_controller.php',
+    'cible' => '../portfolio/controllers/cible_controller.php',
 ];
 
 $page = $pages['homepage'];

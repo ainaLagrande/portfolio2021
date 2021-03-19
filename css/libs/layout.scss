@@ -147,7 +147,6 @@ nav{
         }
     } 
 }
-
 // ******REVEAL TRANSITION
 
 [class*="reveal-"]
@@ -179,6 +178,31 @@ nav{
 .formValide
 {
 color:green;
+}
+
+@media screen and (min-width : 1024px)  /*laptop/descktop*/
+{
+  // ******************************NAVBAR*********************
+    .btn_menu,.toggle{
+      display: none;
+    }
+    nav
+  {
+      display: flex;
+      position: relative;
+      height: 80px;
+      border-bottom: 2px solid $primary-pink-color;
+      z-index: 1;
+      
+      ul{
+          flex-direction:row;
+          width: 100%;
+        }
+  }
+  .sub-menu{
+    background-color: $primary-pink-color;
+    height:160px;
+  }
 }
 
 
