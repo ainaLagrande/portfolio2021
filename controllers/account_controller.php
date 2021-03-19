@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-
+ 
 $user_id = $_SESSION['id'];
  if(!isset($_SESSION['auth'])) {//si utilisateur essaye d'acceder a la page ss s'etre connecté
         header('Location:index.php?page=login');
